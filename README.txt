@@ -19,8 +19,9 @@ along with this file. If not, see <http://www.gnu.org/licenses/>.
 
 Getting started:
 Make sure the x3toolbox and its subdirectories are on your matlab path.
-There are two entry points to the tools: 
+There are two entry points to the tools:
 1. To evaluate just the compression algorithm, use x3compress and x3uncompress, e.g.:
+  addpath('./XML4MATv2');  % Only required for Octave
   x = wavread('GI16_15s.wav',[1 5000]) ;  % read in some audio from a wav file
   x = round(32768*x) ;   % convert to integers
   p = x3compress(x) ;    % compress using default values
